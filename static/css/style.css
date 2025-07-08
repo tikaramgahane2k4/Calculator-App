@@ -102,7 +102,8 @@ button:active {
         border: none;
 
     }
-    h1{
+
+    h1 {
         font-size: 30px;
         margin-top: 35px;
     }
@@ -115,8 +116,8 @@ button:active {
 
 @media (max-width: 425px) {
     .container {
-        width: 400px;
-        margin-top: 150px;
+        width: 380px;
+        margin-top: 80px;
     }
 
     .calculation-box {
@@ -126,6 +127,12 @@ button:active {
         border: none;
 
     }
+
+    h1 {
+        font-size: 30px;
+        margin-top: 35px;
+    }
+
 
     button {
         border-radius: 20px;
