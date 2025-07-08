@@ -89,9 +89,48 @@ button:active {
     margin-left: -85px;
 }
 
+@media (max-width: 430px) {
+    .container {
+        width: 400px;
+        margin-top: 150px;
+    }
+
+    .calculation-box {
+        width: 350px;
+        margin-left: 24px;
+        background: black;
+        border: none;
+
+    }
+
+    button {
+        border-radius: 20px;
+    }
+}
+
+
 @media (max-width: 425px) {
     .container {
         width: 400px;
+        margin-top: 150px;
+    }
+
+    .calculation-box {
+        width: 350px;
+        margin-left: 24px;
+        background: black;
+        border: none;
+
+    }
+
+    button {
+        border-radius: 20px;
+    }
+}
+
+@media (max-width: 401px) {
+    .container {
+        width: 380px;
     }
 
     .calculation-box {
