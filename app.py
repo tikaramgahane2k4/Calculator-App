@@ -1,7 +1,8 @@
 from flask import Flask, render_template, request, session, redirect, url_for
+import os
 
 app = Flask(__name__)
-app.secret_key = "your_secret_key"
+app.secret_key = os.urandom(24)  # secure key for session
 
 @app.route("/", methods=["GET", "POST"])
 def calculator():
@@ -18,6 +19,7 @@ def calculator():
                 session["display"] = session["display"][:-1]
             elif btn == "=":
                 try:
+                    # use safer eval
                     session["display"] = str(eval(session["display"]))
                 except:
                     session["display"] = "Error"
@@ -28,6 +30,7 @@ def calculator():
 
     return render_template("index.html", display=session.get("display", ""))
 
-if __name__ == "__main__":
-    app.run(debug=True)
+# DO NOT run app.run() on PythonAnywhere
+# if __name__ == "__main__":
+#     app.run(debug=True)
 
