@@ -19,8 +19,9 @@ def calculator():
                 session["display"] = session["display"][:-1]
             elif btn == "=":
                 try:
-                    # use safer eval
+
                     session["display"] = str(eval(session["display"]))
+                    
                 except:
                     session["display"] = "Error"
             else:
@@ -30,7 +31,5 @@ def calculator():
 
     return render_template("index.html", display=session.get("display", ""))
 
-# DO NOT run app.run() on PythonAnywhere
-# if __name__ == "__main__":
-#     app.run(debug=True)
+
 
